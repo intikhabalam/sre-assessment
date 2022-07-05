@@ -15,7 +15,8 @@ variables:
   containerRegistry: 'clearpointacr.azurecr.io'
   dockerfilePathbackend: '$(Build.SourcesDirectory)/Backend/TodoList.Api/Dockerfile'
   dockerfilePathfrontend: '$(Build.SourcesDirectory)/Frontend/Dockerfile'
-  tag: '$(Build.BuildId)'
+  tagfrontend: 'frontend'
+  tagbackend: 'backend'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -30,22 +31,22 @@ stages:
       vmImage: $(vmImageName)
     steps:
     - task: Docker@2
-      displayName: Build and push an image to container registry
+      displayName: Build and push backend app
       inputs:
         command: buildAndPush
         repository: $(imageRepository)
         dockerfile: $(dockerfilePathbackend)
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
-          $(tag)
+          $(tagbackend)
 
     - task: Docker@2
-      displayName: Build and push an image to container registry
+      displayName: Build and push frontend app
       inputs:
         command: buildAndPush
         repository: $(imageRepository)
         dockerfile: $(dockerfilePathfrontend)
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
-          $(tag)
+          $(tagfrontend)
 

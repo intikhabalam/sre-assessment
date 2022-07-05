@@ -15,8 +15,8 @@ variables:
   containerRegistry: 'clearpointacr.azurecr.io'
   dockerfilePathbackend: '$(Build.SourcesDirectory)/Backend/TodoList.Api/Dockerfile'
   dockerfilePathfrontend: '$(Build.SourcesDirectory)/Frontend/Dockerfile'
-  tagfrontend: 'frontend'
-  tagbackend: 'backend'
+  tagfrontend: 'frontend-$(Build.BuildId)'
+  tagbackend: 'backend-$(Build.BuildId)'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'

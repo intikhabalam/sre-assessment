@@ -14,5 +14,19 @@ steps:
   inputs:
     azureSubscription: 'Pay-As-You-Go(5b58a2c2-c9bd-4698-9dfa-6e172835c0b9)'
     scriptType: 'batch'
-    scriptLocation: 'scriptPath'
-    scriptPath: 'Infrastructure/powershell/tf-sa.sh'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      #!/bin/bash
+      
+      rgName=clearpointresgrpiac
+      saName=tfstate
+      containerName=tf
+      
+      # Create resource group
+      az group create --name $rgName --location eastus
+      
+      # Create storage account
+      az storage account create --resource-group $rgName --name $saName --sku Standard_LRS --encryption-services blob
+      
+      # Create blob container
+      az storage container create --name $containerName --account-name $saName

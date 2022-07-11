@@ -1,0 +1,35 @@
+resource "azurerm_container_registry" "clearpoint" {
+  name                = "clearpointacr"
+  resource_group_name = "clearpointresgrpiac"
+  location            = azurerm_resource_group.clearpoint.location
+  sku                 = "Premium"
+
+}
+
+resource "azurerm_kubernetes_cluster" "clearpoint" {
+  name                = "clearpoint-aks"
+  location            = azurerm_resource_group.clearpoint.location
+  resource_group_name = "clearpointresgrpiac"
+  dns_prefix          = "clearpointaks"
+
+  default_node_pool {
+    name       = "default"
+    node_count = 1
+    vm_size    = "Standard_D2_v2"
+  }
+
+  identity {
+    type = "SystemAssigned"
+  }
+
+  tags = {
+    Environment = "Production"
+  }
+}
+
+resource "azurerm_role_assignment" "clearpoint" {
+  principal_id                     = azurerm_kubernetes_cluster.clearpoint.kubelet_identity[0].object_id
+  role_definition_name             = "AcrPull"
+  scope                            = azurerm_container_registry.clearpoint.id
+  skip_service_principal_aad_check = true
+}

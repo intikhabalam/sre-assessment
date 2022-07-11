@@ -50,3 +50,9 @@ stages:
         tags: |
           $(tagfrontend)
 
+    - task: CopyFiles@2
+      displayName: 'Copy Files to: drop'
+      inputs:
+        SourceFolder: Infrastructure
+        TargetFolder: drop
+

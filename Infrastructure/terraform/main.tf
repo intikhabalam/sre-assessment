@@ -1,14 +1,14 @@
 resource "azurerm_container_registry" "clearpoint" {
   name                = "clearpointacr"
   resource_group_name = "clearpointresgrpiac"
-  location            = azurerm_resource_group.clearpoint.location
+  location            = "eastus"
   sku                 = "Premium"
 
 }
 
 resource "azurerm_kubernetes_cluster" "clearpoint" {
   name                = "clearpoint-aks"
-  location            = azurerm_resource_group.clearpoint.location
+  location            = "eastus"
   resource_group_name = "clearpointresgrpiac"
   dns_prefix          = "clearpointaks"
 

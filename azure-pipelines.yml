@@ -19,7 +19,7 @@ steps:
       #!/bin/bash
       
       rgName=clearpointresgrpiac
-      saName=tfstate
+      saName=clearpointtfstate
       containerName=tf
       
       # Create resource group

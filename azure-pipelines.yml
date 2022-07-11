@@ -20,7 +20,7 @@ steps:
       
       rgName=clearpointresgrpiac
       saName=clearpointtfstate
-      containerName=tf
+      containerName=clearpointtf
       
       # Create resource group
       az group create --name $rgName --location eastus

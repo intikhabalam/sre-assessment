@@ -15,4 +15,4 @@ steps:
     azureSubscription: 'Pay-As-You-Go(5b58a2c2-c9bd-4698-9dfa-6e172835c0b9)'
     scriptType: 'batch'
     scriptLocation: 'scriptPath'
-    scriptPath: '$(System.DefaultWorkingDirectory)/_intikhabalam_sre-assessment/Infrastructure/powershell/tf-sa.sh'
+    scriptPath: 'Infrastructure/powershell/tf-sa.sh'

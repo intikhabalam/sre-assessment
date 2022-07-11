@@ -12,7 +12,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'aed1cd9e-eb3a-413c-90a3-0a35f446c8cf'
   imageRepository: 'sreassessment'
-  containerRegistry: 'clearpointaksregistry.azurecr.io'
+  containerRegistry: 'clearpointacr.azurecr.io'
   dockerfilePathbackend: '$(Build.SourcesDirectory)/Backend/TodoList.Api/Dockerfile'
   dockerfilePathfrontend: '$(Build.SourcesDirectory)/Frontend/Dockerfile'
   tagfrontend: 'frontend-$(Build.BuildId)'

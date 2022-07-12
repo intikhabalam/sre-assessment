@@ -1,0 +1,366 @@
+{
+    "source": 2,
+    "revision": 3,
+    "description": null,
+    "createdBy": {
+        "displayName": "Intikhab Alam",
+        "url": "https://spsprodeau1.vssps.visualstudio.com/Ad9351fef-f31d-4ff2-8cdc-f6b7c0d2b021/_apis/Identities/9846b25d-352a-6a45-8299-929acacbcc5a",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/IntikhabNZ/_apis/GraphProfile/MemberAvatars/msa.OTg0NmIyNWQtMzUyYS03YTQ1LTgyOTktOTI5YWNhY2JjYzVh"
+            }
+        },
+        "id": "9846b25d-352a-6a45-8299-929acacbcc5a",
+        "uniqueName": "Intikhab_NZ@outlook.com",
+        "imageUrl": "https://dev.azure.com/IntikhabNZ/_apis/GraphProfile/MemberAvatars/msa.OTg0NmIyNWQtMzUyYS03YTQ1LTgyOTktOTI5YWNhY2JjYzVh",
+        "descriptor": "msa.OTg0NmIyNWQtMzUyYS03YTQ1LTgyOTktOTI5YWNhY2JjYzVh"
+    },
+    "createdOn": "2022-07-12T02:56:51.177Z",
+    "modifiedBy": {
+        "displayName": "Intikhab Alam",
+        "url": "https://spsprodeau1.vssps.visualstudio.com/Ad9351fef-f31d-4ff2-8cdc-f6b7c0d2b021/_apis/Identities/9846b25d-352a-6a45-8299-929acacbcc5a",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/IntikhabNZ/_apis/GraphProfile/MemberAvatars/msa.OTg0NmIyNWQtMzUyYS03YTQ1LTgyOTktOTI5YWNhY2JjYzVh"
+            }
+        },
+        "id": "9846b25d-352a-6a45-8299-929acacbcc5a",
+        "uniqueName": "Intikhab_NZ@outlook.com",
+        "imageUrl": "https://dev.azure.com/IntikhabNZ/_apis/GraphProfile/MemberAvatars/msa.OTg0NmIyNWQtMzUyYS03YTQ1LTgyOTktOTI5YWNhY2JjYzVh",
+        "descriptor": "msa.OTg0NmIyNWQtMzUyYS03YTQ1LTgyOTktOTI5YWNhY2JjYzVh"
+    },
+    "modifiedOn": "2022-07-12T03:39:40.550Z",
+    "isDeleted": false,
+    "lastRelease": {
+        "id": 30,
+        "name": "Release-1",
+        "artifacts": [],
+        "_links": {},
+        "description": "",
+        "releaseDefinition": {
+            "id": 2,
+            "projectReference": null,
+            "_links": {}
+        },
+        "createdOn": "2022-07-12T03:40:35.423Z",
+        "createdBy": {
+            "displayName": "Intikhab Alam",
+            "url": "https://spsprodeau1.vssps.visualstudio.com/Ad9351fef-f31d-4ff2-8cdc-f6b7c0d2b021/_apis/Identities/9846b25d-352a-6a45-8299-929acacbcc5a",
+            "_links": {
+                "avatar": {
+                    "href": "https://dev.azure.com/IntikhabNZ/_apis/GraphProfile/MemberAvatars/msa.OTg0NmIyNWQtMzUyYS03YTQ1LTgyOTktOTI5YWNhY2JjYzVh"
+                }
+            },
+            "id": "9846b25d-352a-6a45-8299-929acacbcc5a",
+            "uniqueName": "Intikhab_NZ@outlook.com",
+            "imageUrl": "https://dev.azure.com/IntikhabNZ/_apis/GraphProfile/MemberAvatars/msa.OTg0NmIyNWQtMzUyYS03YTQ1LTgyOTktOTI5YWNhY2JjYzVh",
+            "descriptor": "msa.OTg0NmIyNWQtMzUyYS03YTQ1LTgyOTktOTI5YWNhY2JjYzVh"
+        }
+    },
+    "variables": {},
+    "variableGroups": [],
+    "environments": [
+        {
+            "id": 2,
+            "name": "clearpoint-app deployment",
+            "rank": 1,
+            "owner": {
+                "displayName": "Intikhab Alam",
+                "url": "https://spsprodeau1.vssps.visualstudio.com/Ad9351fef-f31d-4ff2-8cdc-f6b7c0d2b021/_apis/Identities/9846b25d-352a-6a45-8299-929acacbcc5a",
+                "_links": {
+                    "avatar": {
+                        "href": "https://dev.azure.com/IntikhabNZ/_apis/GraphProfile/MemberAvatars/msa.OTg0NmIyNWQtMzUyYS03YTQ1LTgyOTktOTI5YWNhY2JjYzVh"
+                    }
+                },
+                "id": "9846b25d-352a-6a45-8299-929acacbcc5a",
+                "uniqueName": "Intikhab_NZ@outlook.com",
+                "imageUrl": "https://dev.azure.com/IntikhabNZ/_apis/GraphProfile/MemberAvatars/msa.OTg0NmIyNWQtMzUyYS03YTQ1LTgyOTktOTI5YWNhY2JjYzVh",
+                "descriptor": "msa.OTg0NmIyNWQtMzUyYS03YTQ1LTgyOTktOTI5YWNhY2JjYzVh"
+            },
+            "variables": {},
+            "variableGroups": [],
+            "preDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 4
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 1
+                }
+            },
+            "deployStep": {
+                "id": 5
+            },
+            "postDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 6
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 2
+                }
+            },
+            "deployPhases": [
+                {
+                    "deploymentInput": {
+                        "parallelExecution": {
+                            "parallelExecutionType": 0
+                        },
+                        "agentSpecification": null,
+                        "skipArtifactsDownload": false,
+                        "artifactsDownloadInput": {
+                            "downloadInputs": [
+                                {
+                                    "alias": "clearpointGithub",
+                                    "artifactType": "GitHub",
+                                    "artifactDownloadMode": "All",
+                                    "artifactItems": []
+                                }
+                            ]
+                        },
+                        "queueId": 31,
+                        "demands": [],
+                        "enableAccessToken": false,
+                        "timeoutInMinutes": 0,
+                        "jobCancelTimeoutInMinutes": 1,
+                        "condition": "succeeded()",
+                        "overrideInputs": {}
+                    },
+                    "rank": 1,
+                    "phaseType": 1,
+                    "name": "Agent job-Deploy APPs",
+                    "refName": null,
+                    "workflowTasks": [
+                        {
+                            "environment": {},
+                            "taskId": "8413c881-4959-43d5-8840-b4ea0ffc5cfd",
+                            "version": "0.*",
+                            "name": "Install Kubectl latest",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "kubectlVersion": "latest"
+                            }
+                        },
+                        {
+                            "environment": {},
+                            "taskId": "cbc316a2-586f-4def-be79-488a1f503564",
+                            "version": "1.*",
+                            "name": "kubectl - deploy yaml files",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "retryCountOnTaskFailure": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "connectionType": "Azure Resource Manager",
+                                "kubernetesServiceEndpoint": "",
+                                "azureSubscriptionEndpoint": "d6c4816c-1fcc-419f-bac7-bd4e5d644dcf",
+                                "azureResourceGroup": "clearpointresgrpiac",
+                                "kubernetesCluster": "clearpoint-aks",
+                                "useClusterAdmin": "true",
+                                "namespace": "clearpointnamespace",
+                                "command": "",
+                                "useConfigurationFile": "true",
+                                "configurationType": "configuration",
+                                "configuration": "$(System.DefaultWorkingDirectory)/clearpointGithub/Infrastructure/yamlfiles/clearpoint.yaml",
+                                "inline": "",
+                                "arguments": "",
+                                "secretType": "dockerRegistry",
+                                "secretArguments": "",
+                                "containerRegistryType": "Azure Container Registry",
+                                "dockerRegistryEndpoint": "",
+                                "azureSubscriptionEndpointForSecrets": "",
+                                "azureContainerRegistry": "",
+                                "secretName": "",
+                                "forceUpdate": "true",
+                                "configMapName": "",
+                                "forceUpdateConfigMap": "false",
+                                "useConfigMapFile": "false",
+                                "configMapFile": "",
+                                "configMapArguments": "",
+                                "versionOrLocation": "version",
+                                "versionSpec": "1.13.2",
+                                "checkLatest": "false",
+                                "specifyLocation": "",
+                                "cwd": "$(System.DefaultWorkingDirectory)",
+                                "outputFormat": "json"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "environmentOptions": {
+                "emailNotificationType": "OnlyOnFailure",
+                "emailRecipients": "release.environment.owner;release.creator",
+                "skipArtifactsDownload": false,
+                "timeoutInMinutes": 0,
+                "enableAccessToken": false,
+                "publishDeploymentStatus": true,
+                "badgeEnabled": false,
+                "autoLinkWorkItems": false,
+                "pullRequestDeploymentEnabled": false
+            },
+            "demands": [],
+            "conditions": [
+                {
+                    "name": "ReleaseStarted",
+                    "conditionType": 1,
+                    "value": ""
+                }
+            ],
+            "executionPolicy": {
+                "concurrencyCount": 1,
+                "queueDepthCount": 0
+            },
+            "schedules": [],
+            "currentRelease": {
+                "id": 30,
+                "url": "https://vsrm.dev.azure.com/IntikhabNZ/bb6d7288-1246-4709-996c-a31db4e7fa6a/_apis/Release/releases/30",
+                "_links": {}
+            },
+            "retentionPolicy": {
+                "daysToKeep": 30,
+                "releasesToKeep": 3,
+                "retainBuild": true
+            },
+            "processParameters": {},
+            "properties": {
+                "BoardsEnvironmentType": {
+                    "$type": "System.String",
+                    "$value": "unmapped"
+                },
+                "LinkBoardsWorkItems": {
+                    "$type": "System.String",
+                    "$value": "False"
+                }
+            },
+            "preDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "postDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "environmentTriggers": [],
+            "badgeUrl": "https://vsrm.dev.azure.com/IntikhabNZ/_apis/public/Release/badge/bb6d7288-1246-4709-996c-a31db4e7fa6a/2/2"
+        }
+    ],
+    "artifacts": [
+        {
+            "sourceId": "a7b3d9ac-73aa-47df-95f7-746bd79ce855:intikhabalam/sre-assessment",
+            "type": "GitHub",
+            "alias": "clearpointGithub",
+            "definitionReference": {
+                "artifactSourceDefinitionUrl": {
+                    "id": "https://github.com/intikhabalam/sre-assessment",
+                    "name": ""
+                },
+                "branch": {
+                    "id": "main",
+                    "name": "main"
+                },
+                "checkoutNestedSubmodules": {
+                    "id": "True",
+                    "name": "Any nested submodules within"
+                },
+                "checkoutSubmodules": {
+                    "id": "",
+                    "name": ""
+                },
+                "connection": {
+                    "id": "a7b3d9ac-73aa-47df-95f7-746bd79ce855",
+                    "name": "intikhabalam"
+                },
+                "defaultVersionSpecific": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionType": {
+                    "id": "latestFromBranchType",
+                    "name": "Latest from the default branch"
+                },
+                "definition": {
+                    "id": "intikhabalam/sre-assessment",
+                    "name": "intikhabalam/sre-assessment"
+                },
+                "fetchDepth": {
+                    "id": "",
+                    "name": ""
+                },
+                "gitHubRepositoryId": {
+                    "id": "509404484",
+                    "name": "509404484"
+                },
+                "gitLfsSupport": {
+                    "id": "",
+                    "name": ""
+                }
+            },
+            "isPrimary": true,
+            "isRetained": false
+        }
+    ],
+    "triggers": [],
+    "releaseNameFormat": "Release-$(rev:r)",
+    "tags": [],
+    "properties": {
+        "DefinitionCreationSource": {
+            "$type": "System.String",
+            "$value": "ReleaseClone"
+        },
+        "IntegrateBoardsWorkItems": {
+            "$type": "System.String",
+            "$value": "False"
+        },
+        "IntegrateJiraWorkItems": {
+            "$type": "System.String",
+            "$value": "false"
+        }
+    },
+    "id": 2,
+    "name": "Clearpoint-AppDeployment-02",
+    "path": "\\clearpoint",
+    "projectReference": null,
+    "url": "https://vsrm.dev.azure.com/IntikhabNZ/bb6d7288-1246-4709-996c-a31db4e7fa6a/_apis/Release/definitions/2",
+    "_links": {
+        "self": {
+            "href": "https://vsrm.dev.azure.com/IntikhabNZ/bb6d7288-1246-4709-996c-a31db4e7fa6a/_apis/Release/definitions/2"
+        },
+        "web": {
+            "href": "https://dev.azure.com/IntikhabNZ/bb6d7288-1246-4709-996c-a31db4e7fa6a/_release?definitionId=2"
+        }
+    }
+}

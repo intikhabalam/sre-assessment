@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: backend
-  namespace: development
+  namespace: clearpointnamespace
   labels:
     app.kubernetes.io/name: backend
 spec:
@@ -18,7 +18,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: backend-service
-  namespace: development
+  namespace: clearpointnamespace
 spec:
   selector:
     app.kubernetes.io/name: backend
@@ -33,7 +33,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: frontend
-  namespace: development
+  namespace: clearpointnamespace
   labels:
     app.kubernetes.io/name: frontend
 spec:
@@ -60,7 +60,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: frontend-service
-  namespace: development
+  namespace: clearpointnamespace
 spec:
   selector:
     app.kubernetes.io/name: frontend
@@ -75,7 +75,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: app-config
-  namespace: development
+  namespace: clearpointnamespace
 data:
   backend_host: "BACKEND_HOST_VALUE"
   backend_port: "BACKEND_PORT_VALUE"

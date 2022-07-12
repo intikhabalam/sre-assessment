@@ -1,3 +1,4 @@
+# create azure container registry
 resource "azurerm_container_registry" "clearpoint" {
   name                = "clearpointacr"
   resource_group_name = "clearpointresgrpiac"
@@ -6,6 +7,7 @@ resource "azurerm_container_registry" "clearpoint" {
 
 }
 
+# create azure kubernetes cluster
 resource "azurerm_kubernetes_cluster" "clearpoint" {
   name                = "clearpoint-aks"
   location            = "eastus"
@@ -27,6 +29,7 @@ resource "azurerm_kubernetes_cluster" "clearpoint" {
   }
 }
 
+# link the ACR with AKS using role assignment
 resource "azurerm_role_assignment" "clearpoint" {
   principal_id                     = azurerm_kubernetes_cluster.clearpoint.kubelet_identity[0].object_id
   role_definition_name             = "AcrPull"

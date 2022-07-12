@@ -34,7 +34,7 @@ stages:
       displayName: Build and push backend app
       inputs:
         command: buildAndPush
-        repository: $(imageRepository)
+        # repository: $(imageRepository)
         dockerfile: $(dockerfilePathbackend)
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
@@ -43,7 +43,7 @@ stages:
       displayName: Build and push frontend app
       inputs:
         command: buildAndPush
-        repository: $(imageRepository)
+        # repository: $(imageRepository)
         dockerfile: $(dockerfilePathfrontend)
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
@@ -59,6 +59,7 @@ stages:
         targetPath: '$(Pipeline.Workspace)'
         artifact: 'manifests'
         publishLocation: 'pipeline'
+
 
     - task: PublishPipelineArtifact@1
       inputs:

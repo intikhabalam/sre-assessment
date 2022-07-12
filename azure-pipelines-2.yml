@@ -30,29 +30,39 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:
-    # - task: Docker@2
-    #   displayName: Build and push backend app
-    #   inputs:
-    #     command: buildAndPush
-    #     repository: $(imageRepository)
-    #     dockerfile: $(dockerfilePathbackend)
-    #     containerRegistry: $(dockerRegistryServiceConnection)
-    #     tags: |
-    #       $(tagbackend)
-
-    # - task: Docker@2
-    #   displayName: Build and push frontend app
-    #   inputs:
-    #     command: buildAndPush
-    #     repository: $(imageRepository)
-    #     dockerfile: $(dockerfilePathfrontend)
-    #     containerRegistry: $(dockerRegistryServiceConnection)
-    #     tags: |
-    #       $(tagfrontend)
-
-    - task: CopyFiles@2
-      displayName: 'Copy Files to: drop'
+    - task: Docker@2
+      displayName: Build and push backend app
       inputs:
-        SourceFolder: Infrastructure
-        TargetFolder: drop
+        command: buildAndPush
+        repository: $(imageRepository)
+        dockerfile: $(dockerfilePathbackend)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tagbackend)
 
+    - task: Docker@2
+      displayName: Build and push frontend app
+      inputs:
+        command: buildAndPush
+        repository: $(imageRepository)
+        dockerfile: $(dockerfilePathfrontend)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tagfrontend)
+
+    # - task: CopyFiles@2
+    #   displayName: 'Copy Files to: drop'
+    #   inputs:
+    #     SourceFolder: Infrastructure
+    #     TargetFolder: drop
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(Pipeline.Workspace)'
+        artifact: 'manifests'
+        publishLocation: 'pipeline'
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        artifactName: 'manifests'
+        path: 'manifests'

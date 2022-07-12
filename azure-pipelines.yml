@@ -48,20 +48,3 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tagfrontend)
-    # - task: CopyFiles@2
-    #   displayName: 'Copy Files to: drop'
-    #   inputs:
-    #     SourceFolder: Infrastructure
-    #     TargetFolder: drop
-
-    - task: PublishPipelineArtifact@1
-      inputs:
-        targetPath: '$(Pipeline.Workspace)'
-        artifact: 'manifests'
-        publishLocation: 'pipeline'
-
-
-    - task: PublishPipelineArtifact@1
-      inputs:
-        artifactName: 'manifests'
-        path: 'manifests'

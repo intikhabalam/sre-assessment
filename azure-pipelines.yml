@@ -1,33 +1,66 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# Docker
+# Build and push an image to Azure Container Registry
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+resources:
+- repo: self
 
-steps:
-- task: AzureCLI@2
-  inputs:
-    azureSubscription: 'Pay-As-You-Go(5b58a2c2-c9bd-4698-9dfa-6e172835c0b9)'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: |
-      #!/bin/bash
-      
-      rgName=clearpointresgrpiac
-      saName=clearpointtfstate
-      containerName=clearpointtf
-      
-      # Create resource group
-      az group create --name $rgName --location eastus
-      
-      # Create storage account
-      az storage account create --resource-group $rgName --name $saName --sku Standard_LRS --encryption-services blob
-      
-      # Create blob container
-      az storage container create --name $containerName --account-name $saName --auth-mode login
+variables:
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: 'aed1cd9e-eb3a-413c-90a3-0a35f446c8cf'
+  imageRepository: 'sreassessment'
+  containerRegistry: 'clearpointacr.azurecr.io'
+  dockerfilePathbackend: '$(Build.SourcesDirectory)/Backend/TodoList.Api/Dockerfile'
+  dockerfilePathfrontend: '$(Build.SourcesDirectory)/Frontend/Dockerfile'
+  tagfrontend: 'frontend-$(Build.BuildId)'
+  tagbackend: 'backend-$(Build.BuildId)'
 
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+stages:
+- stage: Build
+  displayName: Build and push stage
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - task: Docker@2
+      displayName: Build and push backend app
+      inputs:
+        command: buildAndPush
+        repository: $(imageRepository)
+        dockerfile: $(dockerfilePathbackend)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tagbackend)
+    - task: Docker@2
+      displayName: Build and push frontend app
+      inputs:
+        command: buildAndPush
+        repository: $(imageRepository)
+        dockerfile: $(dockerfilePathfrontend)
+        containerRegistry: $(dockerRegistryServiceConnection)
+        tags: |
+          $(tagfrontend)
+    # - task: CopyFiles@2
+    #   displayName: 'Copy Files to: drop'
+    #   inputs:
+    #     SourceFolder: Infrastructure
+    #     TargetFolder: drop
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(Pipeline.Workspace)'
+        artifact: 'manifests'
+        publishLocation: 'pipeline'
+
+    - task: PublishPipelineArtifact@1
+      inputs:
+        artifactName: 'manifests'
+        path: 'manifests'
